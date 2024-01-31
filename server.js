@@ -10,7 +10,7 @@ app.set("view engine", "handlebars");
 app.set("layouts", process.cwd() + "/views/layouts");
 
 app.get("*", (req, res) => {
-  res.render("wrapper");
+  res.render("homepage", { layout: "index", title: "testing 123" });
 });
 
 app.listen(3000, () =>
